@@ -20,6 +20,8 @@
   border: none;
   cursor: pointer;
   grid-column: 2;
+  box-sizing: border-box;
+  place-content: center;
 }
 
 .experiencia .subtitulo {
@@ -74,6 +76,7 @@
   font-size: 1.125rem;
   line-height: 1.1;
   font-weight: bold;
+  text-align: center;
 }
 
 .empresa-texto {
@@ -114,8 +117,14 @@
     width: initial;
     text-align: left;
   }
-  .empresa-ano::before {
+  .empresa-habilidades {
+    place-content: center;
+  }
+  /* .empresa-ano::before {
     content: "Ano: ";
+  } */
+  .empresa .acesso-link {
+    place-self: center;
   }
 }
 
