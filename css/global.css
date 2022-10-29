@@ -46,8 +46,8 @@ img {
   position: fixed;
   border-radius: 50%;
   border: 3px solid #1a9b9b;
-  top: 890px;
-  right: 15px;
+  top: 90vh;
+  right: 5vh;
 }
 
 @keyframes bounce {
