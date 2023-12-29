@@ -82,7 +82,34 @@
         </ul>
         <a class="acesso-link" href="https://bryanjonathan.github.io/caravan-bootstrap-4/">ACESSE</a>
       </div>
+
+      <div class="empresa empresa-segredo">
+        <span class="empresa-ano">Especial!!</span>
+        <h3 class="empresa-titulo">Ingrid</h3>
+        <span class="empresa-titulo">Ela gosta</span>
+        <p class="empresa-texto">Responda a seguinte pergunta abaixo...</p>
+        <ul class="empresa-habilidades">
+          <li>Tim Bernardes</li>
+          <li>Billie Eilish</li>
+          <li>Sushi</li>
+          <li>Suquinho natural</li>
+          <li>Dormir de conchinha</li>
+        </ul>
+        <button type="button" class="acesso-link" id="pergunta-secreta" disabled>
+          Acesse
+          <!-- <a style="text-decoration: none; color: white; font-weight: 500;" href=""></a> -->
+        </button>
+      </div>
+      <label for="resposta-segredo" class="margin">Qual o nome da sua girafinha de pelúcia favorita?</label>
+      <input class="input" type="text" id="resposta-segredo">
+      
+      <div style="display: flex; gap: 16px;">
+        <button class="botaozao" id="check-pergunta">CHECAR</button>
+        <img id="icon-sucess" class="d-none" src="./img/sucess.svg" style="width: 32px; height: 32px;">
+        <img id="icon-error" class="d-none" src="./img/error.svg" style="width: 32px; height: 32px;">
+      </div>
     </div>
+
   </section>
 
   <section class="formacao" id="formacao" aria-label="Formação">
@@ -140,5 +167,44 @@
     </div>
   </footer>
 </body>
+
+<script>
+  const resposta = document.getElementById("resposta-segredo");
+  const botaoLiberar = document.getElementById("pergunta-secreta");
+  const checkPergunta = document.getElementById("check-pergunta");
+
+  const iconSucess = document.getElementById("icon-sucess");
+  const iconError = document.getElementById("icon-error");
+
+  botaoLiberar.addEventListener("click", function(e) {
+    e.preventDefault();
+    console.log("redirecionar");
+  });
+
+  checkPergunta.addEventListener("click", function() {
+    let respostaInput = resposta.value;
+    respostaInput = respostaInput.trim().toLowerCase();
+
+    iconError.classList.add("d-none");
+    iconSucess.classList.add("d-none");
+
+    iconError.classList.remove("d-block");
+    iconSucess.classList.remove("d-block");
+
+
+    if(respostaInput === "judith" || respostaInput === "judite" || respostaInput === "judihthe" || respostaInput === "jhudith" || respostaInput === "jhudithe" || respostaInput === "jhudite" || respostaInput === "judit") {
+      iconError.classList.add("d-none");
+      iconSucess.classList.add("d-block");
+      botaoLiberar.classList.add("verdinho");
+      botaoLiberar.innerHTML = '<a style="text-decoration: none; color: white; font-weight: 500;" href="./namoro.html">ACESSE</a>';
+      
+    } else {
+      iconSucess.classList.add("d-none");
+      iconError.classList.add("d-block");
+      botaoLiberar.classList.remove("verdinho");
+      botaoLiberar.innerHTML = "ACESSE"
+    }
+  })
+</script>
 
 </html>
