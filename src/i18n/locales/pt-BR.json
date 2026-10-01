@@ -30,7 +30,7 @@
     "ctaExperience": "Ver experiência",
     "photoAlt": "Foto de Jonathan Bryan",
     "highlights": {
-      "international": { "title": "Time internacional", "detail": "Engenheiro na Blings (Tel Aviv)" },
+      "international": { "title": "Colaboração internacional", "detail": "Comunicação e trabalho com equipes multiculturais" },
       "english": { "title": "Inglês avançado (C1)", "detail": "Documentação e comunicação técnica" },
       "leadership": { "title": "Liderança técnica", "detail": "Liderou squad, sprints e processos" },
       "ai": { "title": "IA aplicada", "detail": "Agentes de IA em PRs e code review" }
