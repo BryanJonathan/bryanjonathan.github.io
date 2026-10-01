@@ -1,25 +1,31 @@
-# bryanjonathan.github.io
+# Jonathan Bryan
 
-Portfolio de Jonathan Bryan, publicado em https://bryanjonathan.github.io/.
+**Engenheiro de Software Full-Stack** · Belo Horizonte, MG, Brasil
 
-Feito com Vite, React, TypeScript, Tailwind CSS, framer-motion e i18next (pt-BR / en).
+🌐 **[bryanjonathan.github.io](https://bryanjonathan.github.io/)**
 
-## Desenvolvimento
+Engenheiro de Software com 4+ anos de experiência em desenvolvimento full-stack, arquitetura de sistemas, AWS e liderança técnica. Atuo com TypeScript, JavaScript, PHP/Laravel, React, Next.js, Node.js e Python, com foco em soluções escaláveis e eficientes.
 
-```bash
-npm install
-npm run dev
-```
+## Destaques
 
-- Textos: `src/i18n/locales/pt-BR.json` e `src/i18n/locales/en.json`
-  - Experiência: cada item de `resume.experience.<id>.highlights` vira um bullet; use `<b>…</b>` para destacar números
-- Datas, links, níveis e contatos: `src/data/resume.ts`
-- Foto: salve como `src/assets/foto.jpg` (ou `.png`/`.webp`); sem o arquivo, aparecem as iniciais
+- **Colaboração internacional** — engenheiro na Blings (Tel Aviv, Israel), trabalhando com equipes multiculturais
+- **Inglês avançado (C1)** — documentação e comunicação técnica
+- **Liderança técnica** — liderou squad, sprints e processos na UP Estate
+- **IA aplicada** — agentes de IA integrados à análise de PRs e ao code review
 
-## Deploy
+## Stack
 
-Cada push na `main` dispara `.github/workflows/deploy.yml`, que faz o build e publica no GitHub Pages
-(Settings → Pages → Source: GitHub Actions).
+| Área           | Tecnologias                          |
+| -------------- | ------------------------------------ |
+| Frontend       | React, Next.js, Svelte, Tailwind CSS |
+| Backend e APIs | Node.js, PHP/Laravel, Python, SQL    |
+| Cloud e AWS    | EC2, RDS, DynamoDB, CDN e cache      |
 
-Projetos antigos ficam em `public/` e são publicados nos mesmos caminhos de antes
-(`/bikcraft/...`, `/faculdade-legale/`, `/faculdade-legale-anna/`).
+## Sobre este site
+
+Currículo online em português e inglês, construído com Vite, React, TypeScript, Tailwind CSS, Framer Motion e i18next, e publicado no GitHub Pages.
+
+## Contato
+
+- E-mail: [bryan.jonathan97@gmail.com](mailto:bryan.jonathan97@gmail.com)
+- LinkedIn: [in/jonathan-bryan-ca](https://www.linkedin.com/in/jonathan-bryan-ca/)
