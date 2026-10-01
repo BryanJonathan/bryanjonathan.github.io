@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "title": "Jonathan Bryan — Résumé",
+    "description": "Software Engineer with 4+ years of experience in full-stack development, system architecture, AWS and technical leadership."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Expertise",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact",
+    "menu": "Menu",
+    "open": "Open menu",
+    "close": "Close menu"
+  },
+  "language": {
+    "label": "Language",
+    "pt-BR": "Português",
+    "en": "English"
+  },
+  "profile": {
+    "location": "Belo Horizonte, MG, Brazil"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Full-Stack Software Engineer",
+    "bio": "Software Engineer with 4+ years of experience in full-stack development, system architecture, AWS and technical leadership. I work with TypeScript, JavaScript, PHP/Laravel, React, Next.js, Node.js and Python, focused on scalable and efficient solutions.",
+    "ctaContact": "Let's talk",
+    "ctaExperience": "View experience",
+    "scroll": "Scroll",
+    "photoAlt": "Photo of Jonathan Bryan",
+    "stats": {
+      "years": "Years of experience",
+      "experiences": "Experiences",
+      "areas": "Areas of expertise",
+      "competencies": "Competencies"
+    }
+  },
+  "sections": {
+    "skills": {
+      "eyebrow": "Expertise",
+      "title": "Technical expertise",
+      "subtitle": "Working with modern technologies to build scalable and efficient solutions"
+    },
+    "competencies": {
+      "eyebrow": "Competencies",
+      "title": "Skills and Competencies",
+      "subtitle": "Knowledge built over {{years}}+ years of development"
+    },
+    "experience": {
+      "eyebrow": "Career",
+      "title": "Experience",
+      "subtitle": "From ERP systems to an interactive video platform, across product, cloud and technical leadership."
+    },
+    "education": {
+      "eyebrow": "Academic",
+      "title": "Education and Objective",
+      "subtitle": "The academic foundation behind the practice, and what I'm looking for professionally",
+      "completed": "Completed",
+      "birth": "Born",
+      "location": "Location"
+    },
+    "languages": {
+      "title": "Languages",
+      "subtitle": "Communication to work with teams and clients from other countries",
+      "cefr": "CEFR"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "subtitle": "Courses that complement my education"
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Get in touch",
+      "subtitle": "Let's talk about your next project"
+    }
+  },
+  "resume": {
+    "skills": {
+      "frontend": {
+        "title": "Frontend development",
+        "stack": "React · Next.js · Svelte · Tailwind CSS"
+      },
+      "backend": {
+        "title": "Backend and APIs",
+        "stack": "Node.js · PHP/Laravel · Python · SQL"
+      },
+      "cloud": {
+        "title": "Cloud and AWS",
+        "stack": "EC2 · RDS · DynamoDB · CDN and caching"
+      },
+      "ai": {
+        "title": "AI and technical leadership",
+        "stack": "AI agents · Code review · Squads"
+      }
+    },
+    "competencies": {
+      "c1": "Full-stack development with TypeScript, JavaScript, React, Next.js and Node.js.",
+      "c2": "Backend with PHP/Laravel and Python, building REST APIs and SOAP integrations.",
+      "c3": "Scalable system architecture, microservices and the MVC pattern.",
+      "c4": "AWS cloud with EC2, RDS and DynamoDB, including legacy system migration.",
+      "c5": "Performance work with CDN and caching strategies on the frontend and backend.",
+      "c6": "AI-assisted development, prompt engineering and automated code review.",
+      "c7": "Technical leadership of squads, sprint planning and continuous improvement.",
+      "c8": "SQL databases, cron-driven job queues and PDF and Excel reports.",
+      "c9": "Web scraping with Puppeteer and data analysis with Pandas.",
+      "c10": "Interfaces with Tailwind CSS, Bootstrap, Svelte, jQuery and WordPress, with an SEO focus."
+    },
+    "experience": {
+      "expand": "Read more",
+      "collapse": "Show less",
+      "present": "present",
+      "upEngineer": {
+        "role": "Software Engineer",
+        "location": "Minas Gerais, Brazil",
+        "description": "Designed, architected and built a complete ERP system for the company's clients. Migrated legacy systems to AWS, using EC2 and RDS to scale the operation. Implemented report generation queues run by cron jobs outside business hours, reducing system load and enabling on-demand generation. Built credit analysis, contract delivery and digital authentication modules, plus file upload features and PDF and Excel report exports."
+      },
+      "leeg": {
+        "role": "Leeg Project",
+        "location": "Svelte · Node.js · Puppeteer",
+        "description": "Built the Svelte frontend on top of a Node.js API that I also developed, and used Puppeteer to scrape real estate data from Brazil's main regions. The data was consolidated into reports for analysis and comparison."
+      },
+      "upLead": {
+        "role": "Software Engineering Squad Lead",
+        "location": "Minas Gerais, Brazil",
+        "description": "Led a squad of 2 full-stack developers, assigning tasks, tracking deliveries and removing blockers throughout development. Ran sprint planning and continuous improvement of the development process, keeping the team aligned with project and company goals. Coordinated the development and maintenance of the company's systems, ensuring operational continuity and the evolution of its solutions."
+      },
+      "blings": {
+        "role": "Software Engineer",
+        "location": "Tel Aviv, Israel",
+        "description": "Shipped 20+ features and fixes per sprint cycle, including critical bugs, helping reduce production incidents and making delivery cycles up to 30% faster. Built components for a new public-facing platform, raising conversion by up to 20% and improving the browsing experience. Created an internal admin system that centralizes operations, cutting time spent on manual tasks by 15% and reducing direct database changes. Implemented CDN and caching strategies on the backend and frontend, reducing load times by up to 20% and improving the scalability of the video platform. Also integrated AI agents into the development cycle, automating PR analysis and code review steps and reducing code integration effort by up to 10%."
+      }
+    },
+    "education": {
+      "type": "Technologist degree",
+      "course": "Systems Analysis and Development"
+    },
+    "objective": {
+      "p1": "I'm looking for challenges where I can design and deliver scalable, efficient solutions, combining full-stack development, system architecture and cloud.",
+      "p2": "I value teams that care about code quality, frequent delivery and continuous learning, and I like contributing to processes, reviews and good practices.",
+      "p3": "I'm interested in products with real impact on users, where performance, browsing experience and business results go hand in hand.",
+      "p4": "I want to keep growing as an engineer and as a technical leader, exploring AI applied to software development and helping the team reach its goals."
+    },
+    "languages": {
+      "pt": {
+        "name": "Portuguese",
+        "level": "Native",
+        "description": "Native language."
+      },
+      "en": {
+        "name": "English",
+        "level": "Advanced",
+        "description": "Fluent reading, writing and conversation, including technical documentation and communication."
+      },
+      "es": {
+        "name": "Spanish",
+        "level": "Basic",
+        "description": "Reading comprehension and conversation in everyday situations."
+      }
+    },
+    "certifications": {
+      "cybersecurity": "Cybersecurity Fundamentals",
+      "laravel": "Master Laravel",
+      "react": "React",
+      "nextjs": "Next.js",
+      "dataAnalysis": "Data Analysis"
+    }
+  },
+  "contact": {
+    "email": "Email",
+    "phone": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "location": "Location",
+    "whatsappMessage": "Hi, I found you through your online résumé"
+  },
+  "footer": {
+    "backToTop": "Back to top"
+  }
+}

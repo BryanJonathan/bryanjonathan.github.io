@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 20% 5%;
+    --foreground: 210 40% 98%;
+    --card: 240 16% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 240 18% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 199 89% 55%;
+    --primary-foreground: 240 20% 6%;
+    --primary-glow: 199 89% 62%;
+    --secondary: 240 12% 14%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 12% 14%;
+    --muted-foreground: 215 16% 72%;
+    --accent: 265 85% 65%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 40% 98% / 0.12;
+    --input: 210 40% 98% / 0.14;
+    --ring: 199 89% 55%;
+    --radius: 0.9rem;
+
+    --gradient-primary: linear-gradient(135deg, #26b2f2, #995af2);
+    --gradient-text: linear-gradient(120deg, #74e5fb, #be94f9);
+    --shadow-elegant: 0 24px 60px -28px #26b2f28c;
+    --shadow-glow: 0 0 42px #26b2f261;
+    --glass-background: #1010188c;
+    --glass-border: #f8fafc24;
+    --transition-smooth: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    min-height: 100vh;
+    overflow-x: clip;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: var(--glass-background);
+    border: 1px solid var(--glass-border);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(90deg, #f8fafc0f 1px, #0000 1px),
+      linear-gradient(#f8fafc0f 1px, #0000 1px);
+    background-size: 52px 52px;
+  }
+
+  .text-gradient {
+    background-image: var(--gradient-text);
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  .glow-ring {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .section-anchor {
+    scroll-margin-top: 5.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  ::before,
+  ::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
