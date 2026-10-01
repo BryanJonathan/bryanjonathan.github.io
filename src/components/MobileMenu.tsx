@@ -40,7 +40,7 @@ export function MobileMenu({ active }: { active: SectionId }) {
               <Dialog.Close asChild key={id}>
                 <a
                   href={`#${id}`}
-                  aria-current={active === id ? "true" : undefined}
+                  aria-current={active === id ? "location" : undefined}
                   className={cn(
                     "rounded-2xl px-4 py-3 font-display text-lg transition-colors",
                     active === id ? "bg-white/10 text-foreground" : "text-muted-foreground hover:text-foreground",
@@ -53,7 +53,7 @@ export function MobileMenu({ active }: { active: SectionId }) {
           </nav>
 
           <div className="mt-auto">
-            <p className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
               {t("language.label")}
             </p>
             <div className="grid grid-cols-2 gap-2">

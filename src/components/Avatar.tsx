@@ -1,3 +1,4 @@
+import { useReducedMotion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { profile } from "@/data/resume";
 
@@ -7,6 +8,7 @@ const photos = import.meta.glob<string>("../assets/foto.{jpg,jpeg,png,webp}", {
   import: "default",
 });
 const photo = Object.values(photos)[0];
+export const hasPhoto = Boolean(photo);
 
 // Traços que percorrem a moldura (mesmos valores do site de referência).
 const strokes = [
@@ -25,6 +27,8 @@ const frame = { x: 1.6, y: 1.6, width: 96.8, height: 96.8, rx: 18, fill: "none" 
 
 export function Avatar() {
   const { t } = useTranslation();
+  // O CSS de prefers-reduced-motion não alcança <animate> do SVG; por isso o controle fica aqui.
+  const reduceMotion = useReducedMotion();
 
   return (
     <div className="relative aspect-square w-[18.2rem] animate-float md:w-[23.4rem]">
@@ -58,13 +62,15 @@ export function Avatar() {
             opacity={s.opacity}
             filter="url(#avatar-edge)"
           >
-            <animate
-              attributeName="stroke-dashoffset"
-              from={s.from}
-              to={s.from - 100}
-              dur="4.6s"
-              repeatCount="indefinite"
-            />
+            {!reduceMotion && (
+              <animate
+                attributeName="stroke-dashoffset"
+                from={s.from}
+                to={s.from - 100}
+                dur="4.6s"
+                repeatCount="indefinite"
+              />
+            )}
           </rect>
         ))}
       </svg>

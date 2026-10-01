@@ -11,7 +11,8 @@
     "contact": "Contato",
     "menu": "Menu",
     "open": "Abrir menu",
-    "close": "Fechar menu"
+    "close": "Fechar menu",
+    "skip": "Pular para o conteúdo"
   },
   "language": {
     "label": "Idioma",
@@ -27,13 +28,12 @@
     "bio": "Engenheiro de Software com 4+ anos de experiência em desenvolvimento full-stack, arquitetura de sistemas, AWS e liderança técnica. Atuo com TypeScript, JavaScript, PHP/Laravel, React, Next.js, Node.js e Python, com foco em soluções escaláveis e eficientes.",
     "ctaContact": "Vamos conversar",
     "ctaExperience": "Ver experiência",
-    "scroll": "Rolar",
     "photoAlt": "Foto de Jonathan Bryan",
-    "stats": {
-      "years": "Anos de experiência",
-      "experiences": "Experiências",
-      "areas": "Áreas de expertise",
-      "competencies": "Competências"
+    "highlights": {
+      "international": { "title": "Time internacional", "detail": "Engenheiro na Blings (Tel Aviv)" },
+      "english": { "title": "Inglês avançado (C1)", "detail": "Documentação e comunicação técnica" },
+      "leadership": { "title": "Liderança técnica", "detail": "Liderou squad, sprints e processos" },
+      "ai": { "title": "IA aplicada", "detail": "Agentes de IA em PRs e code review" }
     }
   },
   "sections": {
@@ -43,7 +43,6 @@
       "subtitle": "Trabalhando com tecnologias modernas para construir soluções escaláveis e eficientes"
     },
     "competencies": {
-      "eyebrow": "Competências",
       "title": "Habilidades e Competências",
       "subtitle": "Conhecimentos construídos ao longo de {{years}}+ anos de desenvolvimento"
     },
@@ -79,56 +78,74 @@
     "skills": {
       "frontend": {
         "title": "Desenvolvimento frontend",
-        "stack": "React · Next.js · Svelte · Tailwind CSS"
+        "stack": ["React", "Next.js", "Svelte", "Tailwind CSS"]
       },
       "backend": {
         "title": "Backend e APIs",
-        "stack": "Node.js · PHP/Laravel · Python · SQL"
+        "stack": ["Node.js", "PHP/Laravel", "Python", "SQL"]
       },
       "cloud": {
         "title": "Cloud e AWS",
-        "stack": "EC2 · RDS · DynamoDB · CDN e cache"
+        "stack": ["EC2", "RDS", "DynamoDB", "CDN e cache"]
       },
       "ai": {
         "title": "IA e liderança técnica",
-        "stack": "Agentes de IA · Code review · Squads"
+        "stack": ["Agentes de IA", "Code review", "Squads"]
       }
     },
     "competencies": {
-      "c1": "Desenvolvimento full-stack com TypeScript, JavaScript, React, Next.js e Node.js.",
-      "c2": "Backend com PHP/Laravel e Python, construindo APIs REST e integrações SOAP.",
-      "c3": "Arquitetura de sistemas escaláveis, microsserviços e padrão MVC.",
-      "c4": "Cloud AWS com EC2, RDS e DynamoDB, incluindo a migração de sistemas legados.",
-      "c5": "Performance com CDN e estratégias de cache no frontend e no backend.",
-      "c6": "Desenvolvimento assistido por IA, prompt engineering e automação de code review.",
-      "c7": "Liderança técnica de squads, planejamento de sprints e melhoria contínua.",
-      "c8": "Bancos de dados SQL, filas com cron jobs e relatórios em PDF e Excel.",
-      "c9": "Web scraping com Puppeteer e análise de dados com Pandas.",
-      "c10": "Interfaces com Tailwind CSS, Bootstrap, Svelte, jQuery e WordPress, com foco em SEO."
+      "c1": { "title": "Full-stack", "detail": "TypeScript, React, Next.js e Node.js" },
+      "c2": { "title": "APIs e integrações", "detail": "PHP/Laravel, Python, REST e SOAP" },
+      "c3": { "title": "Arquitetura", "detail": "Sistemas escaláveis, microsserviços e MVC" },
+      "c4": { "title": "Cloud AWS", "detail": "EC2, RDS, DynamoDB e migração de legados" },
+      "c5": { "title": "Performance", "detail": "CDN e cache no frontend e no backend" },
+      "c6": { "title": "IA no desenvolvimento", "detail": "Prompt engineering e code review automatizado" },
+      "c7": { "title": "Liderança técnica", "detail": "Squads, sprints e melhoria contínua" },
+      "c8": { "title": "Dados e automação", "detail": "SQL, filas com cron e relatórios PDF/Excel" },
+      "c9": { "title": "Scraping e análise", "detail": "Puppeteer e Pandas" },
+      "c10": { "title": "Interfaces e SEO", "detail": "Tailwind CSS, Bootstrap, Svelte, jQuery e WordPress" }
     },
     "experience": {
-      "expand": "Ler mais",
-      "collapse": "Recolher",
       "present": "atual",
-      "upEngineer": {
+      "blings": {
         "role": "Engenheiro de Software",
-        "location": "Minas Gerais, Brasil",
-        "description": "Projetei, arquitetei e implementei um sistema ERP completo para os clientes da empresa. Migrei os sistemas legados para a AWS, utilizando EC2 e RDS para ampliar a escalabilidade da operação. Implementei filas de geração de relatórios executadas por cron jobs fora do horário comercial, reduzindo o impacto no sistema e permitindo a geração sob demanda. Desenvolvi módulos de análise de crédito, envio de contratos e autenticação digital, além de funcionalidades de upload de arquivos e exportação de relatórios em PDF e Excel."
-      },
-      "leeg": {
-        "role": "Projeto Leeg",
-        "location": "Svelte · Node.js · Puppeteer",
-        "description": "Desenvolvi o frontend em Svelte consumindo uma API em Node.js, que também construí, e utilizei Puppeteer para fazer scraping de dados imobiliários das principais regiões do Brasil. As informações eram consolidadas em relatórios para análise e comparação."
+        "location": "Tel Aviv, Israel",
+        "highlights": [
+          "Entreguei <b>mais de 20 funcionalidades e correções</b> por ciclo de sprint, incluindo bugs críticos, contribuindo para menos incidentes em produção e ciclos de entrega até <b>30% mais rápidos</b>.",
+          "Desenvolvi componentes para uma nova plataforma voltada ao público, com aumento de até <b>20% na conversão</b> e melhor experiência de navegação.",
+          "Criei um sistema administrativo interno que centraliza operações, com <b>15% menos tempo</b> em tarefas manuais e menos alterações diretas no banco de dados.",
+          "Implementei CDN e estratégias de cache no backend e no frontend, com até <b>20% menos tempo de carregamento</b> e mais escalabilidade na plataforma de vídeos.",
+          "Integrei agentes de IA ao ciclo de desenvolvimento, automatizando a análise de PRs e o code review, com até <b>10% menos esforço</b> na integração de código."
+        ]
       },
       "upLead": {
         "role": "Líder de Squad de Engenharia de Software",
         "location": "Minas Gerais, Brasil",
-        "description": "Liderei uma squad de 2 desenvolvedores full stack, distribuindo tarefas, acompanhando entregas e removendo impedimentos ao longo do desenvolvimento. Conduzi o planejamento de sprints e a melhoria contínua do processo de desenvolvimento, mantendo a equipe alinhada aos objetivos do projeto e da organização. Coordenei o desenvolvimento e a manutenção dos sistemas da empresa, garantindo continuidade operacional e evolução das soluções."
+        "highlights": [
+          "Liderei uma squad de <b>2 desenvolvedores full stack</b>, distribuindo tarefas, acompanhando entregas e removendo impedimentos.",
+          "Conduzi o planejamento de sprints e a melhoria contínua do processo de desenvolvimento, mantendo a equipe alinhada aos objetivos do projeto e da organização.",
+          "Coordenei o desenvolvimento e a manutenção dos sistemas da empresa, garantindo continuidade operacional e evolução das soluções."
+        ]
       },
-      "blings": {
+      "upEngineer": {
         "role": "Engenheiro de Software",
-        "location": "Tel Aviv, Israel",
-        "description": "Entreguei mais de 20 funcionalidades e correções por ciclo de sprint, incluindo bugs críticos, contribuindo para a redução de incidentes em produção e para ciclos de entrega até 30% mais rápidos. Desenvolvi componentes para uma nova plataforma voltada ao público, com aumento de até 20% na conversão e melhor experiência de navegação. Criei um sistema administrativo interno que centraliza operações, reduzindo em 15% o tempo gasto em tarefas manuais e a necessidade de alterações diretas no banco de dados. Implementei CDN e estratégias de cache no backend e no frontend, reduzindo em até 20% o tempo de carregamento e melhorando a escalabilidade da plataforma de vídeos. Também integrei agentes de IA ao ciclo de desenvolvimento, automatizando etapas de análise de PRs e code review e reduzindo em até 10% o esforço de integração de código."
+        "location": "Minas Gerais, Brasil",
+        "highlights": [
+          "Projetei, arquitetei e implementei um sistema ERP completo para os clientes da empresa.",
+          "Migrei os sistemas legados para a AWS, utilizando EC2 e RDS para ampliar a escalabilidade da operação.",
+          "Implementei filas de geração de relatórios executadas por cron jobs fora do horário comercial, reduzindo o impacto no sistema e permitindo a geração sob demanda.",
+          "Desenvolvi módulos de análise de crédito, envio de contratos e autenticação digital.",
+          "Criei funcionalidades de upload de arquivos e exportação de relatórios em PDF e Excel."
+        ]
+      },
+      "leeg": {
+        "role": "Projeto Leeg",
+        "location": "Svelte · Node.js · Puppeteer",
+        "highlights": [
+          "Desenvolvi o frontend em Svelte consumindo uma API em Node.js, que também construí.",
+          "Utilizei Puppeteer para fazer scraping de dados imobiliários das principais regiões do Brasil.",
+          "Consolidei as informações em relatórios para análise e comparação."
+        ]
       }
     },
     "education": {
