@@ -6,7 +6,7 @@
   :root {
     --background: 240 20% 5%;
     --foreground: 210 40% 98%;
-    --card: 240 16% 8%;
+    --card: 228 22% 9%;
     --card-foreground: 210 40% 98%;
     --popover: 240 18% 7%;
     --popover-foreground: 210 40% 98%;
@@ -39,6 +39,12 @@
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Foco visível consistente em todo elemento navegável por teclado. */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 3px;
   }
 
   body {

@@ -12,6 +12,7 @@ npm run dev
 ```
 
 - Textos: `src/i18n/locales/pt-BR.json` e `src/i18n/locales/en.json`
+  - Experiência: cada item de `resume.experience.<id>.highlights` vira um bullet; use `<b>…</b>` para destacar números
 - Datas, links, níveis e contatos: `src/data/resume.ts`
 - Foto: salve como `src/assets/foto.jpg` (ou `.png`/`.webp`); sem o arquivo, aparecem as iniciais
 

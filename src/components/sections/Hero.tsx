@@ -1,56 +1,27 @@
-import { useInView } from "framer-motion";
-import { ArrowRight, MapPin, Mouse } from "lucide-react";
-import { useRef } from "react";
+import { ArrowRight, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { competencies, experiences, profile, skills } from "@/data/resume";
-import { useCountUp } from "@/hooks/useCountUp";
-import { Avatar } from "../Avatar";
+import { highlights, profile } from "@/data/resume";
+import { cn } from "@/lib/utils";
+import { Avatar, hasPhoto } from "../Avatar";
 import { Reveal } from "../Reveal";
-
-function Stat({ value, label, suffix }: { value: number; label: string; suffix?: string }) {
-  const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true });
-  const count = useCountUp(value, inView);
-
-  return (
-    <article ref={ref} className="rounded-2xl border border-white/10 bg-[#12141c]/80 px-4 py-4">
-      <p className="font-display text-3xl font-semibold text-primary">
-        <span>{count}</span>
-        {suffix}
-      </p>
-      <p className="mt-2 text-[0.68rem] font-medium uppercase leading-tight tracking-[0.14em] text-muted-foreground">
-        {label}
-      </p>
-    </article>
-  );
-}
 
 export function Hero() {
   const { t } = useTranslation();
-
-  const stats = [
-    { value: profile.yearsOfExperience, label: t("hero.stats.years"), suffix: "+" },
-    { value: experiences.length, label: t("hero.stats.experiences") },
-    { value: skills.length, label: t("hero.stats.areas") },
-    { value: competencies.length, label: t("hero.stats.competencies") },
-  ];
 
   return (
     <section id="about" className="section-anchor relative flex min-h-screen items-center px-6 pb-16 pt-28">
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
           <Reveal from="left">
-            <p className="animate-fade-in text-sm font-medium uppercase tracking-[0.28em] text-primary">
-              {t("hero.greeting")}
-            </p>
+            <p className="text-sm font-medium uppercase tracking-[0.28em] text-primary">{t("hero.greeting")}</p>
           </Reveal>
           <Reveal from="left" delay={0.05}>
-            <h1 className="text-gradient mt-4 animate-slide-in-left font-display text-4xl font-semibold leading-[1.05] md:text-6xl lg:text-7xl">
+            <h1 className="text-gradient mt-4 font-display text-4xl font-semibold leading-[1.05] md:text-6xl">
               {profile.name}
             </h1>
           </Reveal>
           <Reveal from="left" delay={0.1}>
-            <p className="mt-4 animate-fade-in-up text-lg text-foreground md:text-2xl">{t("hero.role")}</p>
+            <p className="mt-4 text-lg text-foreground md:text-2xl">{t("hero.role")}</p>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">{t("hero.bio")}</p>
@@ -59,44 +30,46 @@ export function Hero() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#contact"
-                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 text-sm font-medium text-primary-foreground shadow-[var(--shadow-elegant)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-auto"
+                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full bg-[image:var(--gradient-primary)] px-6 text-sm font-medium text-primary-foreground shadow-[var(--shadow-elegant)] transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 sm:w-auto"
               >
                 {t("hero.ctaContact")}
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
                 href="#experience"
-                className="glass-panel inline-flex h-11 w-full items-center justify-center gap-2 rounded-2xl border-white/10 !bg-[#12141c] px-5 text-sm font-medium text-foreground transition-[transform,box-shadow] duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-auto"
+                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-card px-6 text-sm font-medium text-foreground transition-[transform,border-color] duration-300 hover:-translate-y-0.5 hover:border-white/30 sm:w-auto"
               >
                 {t("hero.ctaExperience")}
               </a>
             </div>
           </Reveal>
           <Reveal delay={0.25}>
-            <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {stats.map((stat) => (
-                <Stat key={stat.label} {...stat} />
+            <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {highlights.map(({ id, icon: Icon }) => (
+                <li key={id} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-card/80 p-3.5">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[image:var(--gradient-primary)] text-primary-foreground">
+                    <Icon className="h-[1.1rem] w-[1.1rem]" aria-hidden="true" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="font-display text-base font-medium leading-tight text-foreground">
+                      {t(`hero.highlights.${id}.title`)}
+                    </p>
+                    <p className="mt-0.5 text-sm text-muted-foreground">{t(`hero.highlights.${id}.detail`)}</p>
+                  </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </Reveal>
           <Reveal delay={0.3}>
-            <div className="mt-6 flex items-end justify-between gap-4">
-              <p className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 text-accent" aria-hidden="true" />
-                {t("profile.location")}
-              </p>
-              <a
-                href="#skills"
-                className="flex flex-col items-center gap-2 text-[0.65rem] uppercase tracking-[0.35em] text-muted-foreground"
-              >
-                {t("hero.scroll")}
-                <Mouse className="h-6 w-6 animate-blink" aria-hidden="true" />
-              </a>
-            </div>
+            <p className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
+              <MapPin className="h-4 w-4 text-accent" aria-hidden="true" />
+              {t("profile.location")}
+            </p>
           </Reveal>
         </div>
 
-        <Reveal from="scale" delay={0.1} className="flex justify-center">
+        {/* Sem foto, as iniciais são só decoração: no mobile elas empurrariam o conteúdo uma tela para baixo. */}
+        <Reveal from="scale" delay={0.1} className={cn("flex justify-center", !hasPhoto && "max-lg:hidden")}>
           <Avatar />
         </Reveal>
       </div>

@@ -1,4 +1,14 @@
-import { Cloud, Code, Database, Sparkles, type LucideIcon } from "lucide-react";
+import {
+  BrainCircuit,
+  Cloud,
+  Code,
+  Database,
+  Globe,
+  Languages,
+  Sparkles,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
 
 // Dados que não mudam com o idioma. Os textos ficam em src/i18n/locales/*.json.
 
@@ -18,14 +28,23 @@ export const profile = {
 export const sectionIds = ["about", "skills", "experience", "education", "contact"] as const;
 export type SectionId = (typeof sectionIds)[number];
 
-export type Skill = { id: string; icon: LucideIcon; level: number };
+// Diferenciais exibidos no topo. Os textos ficam em hero.highlights.<id>.
+export type Highlight = { id: string; icon: LucideIcon };
 
-// `level` é a porcentagem exibida na barra de cada card de expertise.
+export const highlights: Highlight[] = [
+  { id: "international", icon: Globe },
+  { id: "english", icon: Languages },
+  { id: "leadership", icon: Users },
+  { id: "ai", icon: BrainCircuit },
+];
+
+export type Skill = { id: string; icon: LucideIcon };
+
 export const skills: Skill[] = [
-  { id: "frontend", icon: Code, level: 90 },
-  { id: "backend", icon: Database, level: 85 },
-  { id: "cloud", icon: Cloud, level: 75 },
-  { id: "ai", icon: Sparkles, level: 80 },
+  { id: "frontend", icon: Code },
+  { id: "backend", icon: Database },
+  { id: "cloud", icon: Cloud },
+  { id: "ai", icon: Sparkles },
 ];
 
 export const competencies = ["c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10"] as const;
@@ -38,12 +57,13 @@ export type Experience = {
   end: string | null;
 };
 
-// Ordem cronológica, do mais antigo para o mais recente (como no site de referência).
+// Do mais recente para o mais antigo: quem lê o currículo procura primeiro o cargo atual.
+// Os bullets ficam em resume.experience.<id>.highlights; use <b>…</b> para destacar números.
 export const experiences: Experience[] = [
+  { id: "blings", company: "Blings", start: "2024-10", end: null },
+  { id: "upLead", company: "UP Estate", start: "2024-06", end: "2024-10" },
   { id: "upEngineer", company: "UP Estate", start: "2023-01", end: "2024-06" },
   { id: "leeg", company: "Leeg", start: "2023-01", end: "2024-01" },
-  { id: "upLead", company: "UP Estate", start: "2024-06", end: "2024-10" },
-  { id: "blings", company: "Blings", start: "2024-10", end: null },
 ];
 
 export const education = {
